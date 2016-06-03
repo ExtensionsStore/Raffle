@@ -1,0 +1,16 @@
+{
+    "name": "villa/raffle",
+    "type": "magento-module",
+    "description": "Villa Raffle module",
+    "require": {
+        "php": ">=5.3",
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors": [
+        {
+            "name": "Villa",
+            "email": "david.tay20@gmail.com",
+            "role": "Author/Maintainer"
+        }
+    ]
+}

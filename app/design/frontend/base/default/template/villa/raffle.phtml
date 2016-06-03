@@ -1,0 +1,103 @@
+<h1>Raffle!</h1>
+<p>Submit your email to win a shopping event at our store!</p>
+
+<div class="raffle">
+	<form name="raffle-form" id="raffle-form" action="<?php echo $this->getUrl('raffle') ?>"
+		method="post">
+        <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+		<div class="fieldset">
+			<div class="legend"><?php echo $this->__('Your Information') ?></div>
+			<div>
+				<label for="name" class="required"><?php echo $this->__('Name') ?> <em>*</em></label>
+				<div class="input-box">
+					<input type="text" name="name" class="input-text required-entry" />
+				</div>
+			</div>
+			<div>
+				<label for="email" class="required"><?php echo $this->__('Email') ?> <em>*</em></label>
+				<div class="input-box">
+					<input type="text" name="email" class="input-text required-entry" />
+				</div>
+			</div>
+			<div>
+				<label for="address" class="required"><?php echo $this->__('Address') ?> <em>*</em></label>
+				<div class="input-box">
+					<input type="text" name="address" class="input-text required-entry" />
+				</div>
+			</div>
+			<div>
+				<label for="city" class="required"><?php echo $this->__('City') ?> <em>*</em></label>
+				<div class="input-box">
+					<input type="text" name="city" class="input-text required-entry" />
+				</div>
+			</div>
+			<div>
+				<label for="state" class="required"><?php echo $this->__('State') ?> <em>*</em></label>
+				<div class="input-box">
+					<input type="text" name="state" class="input-text required-entry" />
+				</div>
+			</div>
+			<div>
+				<label for="postcode" class="required"><?php echo $this->__('Zip Code') ?> <em>*</em></label>
+				<div class="input-box">
+					<input type="text" name="postcode"
+						class="input-text required-entry" />
+				</div>
+			</div>
+		</div>
+		<div class="fieldset">
+			<div class="legend"><?php echo $this->__('Location and Size') ?></div>
+			<label for="email"><?php echo $this->__('Location') ?></label>
+			<div class="input-box">
+				<select name="location" class="required-entry">
+					<option value="">Select Location</option>
+					<option value="chicago">Chicago</option>
+					<option value="milwaukee">Milwaukee</option>
+					<option value="philadelphia">Philadelphia</option>
+					<option value="reading">Reading</option>
+					<option value="wilmington">Wilmington</option>
+					<option value="cleveland">Cleveland</option>
+					<option value="detroit">Detroit</option>
+					<option value="rochester">Rochester</option>
+					<option value="minneapolis">Minneapolis</option>
+					<option value="dallas">Dallas</option>
+					<option value="pittsburgh">Pittsburgh</option>
+				</select>
+			</div>
+			<label for="shoe_size"><?php echo $this->__('Shoe Size') ?></label>
+			<div class="input-box">
+				<select name="shoe_size" class="required-entry">
+					<option value=""><?php echo $this->__('Select Shoe Size') ?></option>
+					<option value="6">6</option>
+					<option value="6.5">6.5</option>
+					<option value="7">7</option>
+					<option value="7.5">7.5</option>
+					<option value="8">8</option>
+					<option value="8.5">8.5</option>
+					<option value="9">9</option>
+					<option value="9.5">9.5</option>
+					<option value="10">10</option>
+					<option value="10.5">10.5</option>
+					<option value="11">11</option>
+					<option value="11.5">11.5</option>
+					<option value="12">12</option>
+					<option value="12.5">12.5</option>
+					<option value="13">13</option>
+				</select>				
+			</div>
+		</div>
+		<div class="buttons-set">
+			<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+			<button type="submit" id="submit-button"
+				title="<?php echo Mage::helper('core')->quoteEscape($this->__('Submit')) ?>"
+				class="button">
+				<span><span><?php echo $this->__('Submit') ?></span></span>
+			</button>
+		</div>
+	</form>
+	<script type="text/javascript">
+    //<![CDATA[
+        var raffleForm = new VarienForm('raffle-form', true);
+    //]]>
+    </script>
+</div>

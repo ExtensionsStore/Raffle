@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * 
+ * @category    Villa
+ * @package     Villa_Raffle
+ * @author      Villa <david.tay20@gmail.com>
+ */
+-->
+<config>
+    <modules>
+        <Villa_Raffle>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Villa_Raffle>       
+    </modules>
+</config>

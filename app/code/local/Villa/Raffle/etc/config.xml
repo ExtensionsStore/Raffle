@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * 
+ * @category    Villa
+ * @package     Villa_Raffle
+ * @author      Villa <david.tay20@gmail.com>
+ */
+-->
+<config>
+    <modules>
+        <Villa_Raffle>
+            <version>0.1.0</version>
+        </Villa_Raffle>
+    </modules>
+     <frontend>
+        <routers>
+            <raffle>
+                <use>standard</use>
+                <args>
+                    <module>Villa_Raffle</module>
+                    <frontName>raffle</frontName>
+                </args>
+            </raffle>
+        </routers>
+    </frontend>       
+    <global>
+        <blocks>
+            <raffle>
+                <class>Villa_Raffle_Block</class>
+            </raffle>
+        </blocks> 
+        <helpers>
+            <raffle>
+                <class>Villa_Raffle_Helper</class>
+            </raffle>
+        </helpers>
+        <models>
+            <raffle>
+                <class>Villa_Raffle_Model</class>
+                <resourceModel>raffle_resource</resourceModel>
+            </raffle> 
+            <raffle_resource>
+                <class>Villa_Raffle_Model_Resource</class>
+                <entities>
+                    <entry>
+                        <table>villa_raffle_entry</table>
+                    </entry>                     
+                </entities>
+            </raffle_resource>
+        </models>
+        <resources>
+            <villa_raffle_setup>
+                <setup>
+                    <module>Villa_Raffle</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </villa_raffle_setup>
+        </resources>           
+    </global>   
+</config>
