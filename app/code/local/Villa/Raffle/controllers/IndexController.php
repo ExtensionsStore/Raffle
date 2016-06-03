@@ -32,7 +32,7 @@ class Villa_Raffle_IndexController extends Mage_Core_Controller_Front_Action {
 			$location = $dataObj->getLocation ();
 			$shoeSize = $dataObj->getShoeSize ();
 			
-			if ($name && filter_var ( $email, FILTER_VALIDATE_EMAIL ) && $address && $city && state && $postcode && $location && $shoeSize) {
+			if ($name && filter_var ( $email, FILTER_VALIDATE_EMAIL ) && $address && $city && $state && $postcode && $location && $shoeSize) {
 				
 				try {
 					
